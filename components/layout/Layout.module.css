@@ -1,0 +1,10 @@
+.layout{
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.layout main{
+    background: var(--grey-bg);
+    height: 100%;
+}

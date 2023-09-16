@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lemon: #C2FF51;
+  --black: #222125;
+  --white: #FEFFFB;
+  --grey: #BCBCBC;
+  --grey-bg: #F5F5F5;
+}
+
+body{
+  position: relative;
+}

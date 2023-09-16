@@ -1,0 +1,20 @@
+.header{
+    background: #fff;
+}
+
+.notify {
+    background: var(--lemon);
+}
+
+.search{
+    background: var(--grey-bg);
+}
+
+.search input{
+    background: transparent;
+    outline: none;
+} 
+
+.job_title{
+    color: var(--grey);
+}
