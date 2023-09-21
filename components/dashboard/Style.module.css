@@ -8,12 +8,68 @@
     color: var(--lemon);
 }
 
-.percent{
-    background: rgba(194, 255, 81, 0.50);
-    color: var(--black);
-}
-
-.card small{
+.percent_des{
     color: var(--grey);
     font-size: 10px;
+}
+
+.percent{
+    background: rgba(194, 255, 81, 0.50);
+    color: var(--black-2);
+    font-size: 10px;
+}
+
+.activity{
+    background: #fff;
+    width: 710px;
+}
+
+.feed small{
+    color: var(--grey);
+    font-size: 13px;
+}
+
+.feed button{
+    background:var(--black);
+    color: var(--lemon);
+    font-size: 16px;
+    line-height: 0.5rem;
+}
+
+.schedule{
+    width: calc(100% - 710px - 24px);
+    background: #fff;
+}
+
+.event{
+    width: 100%;
+}
+
+.event .date{
+    background: var(--black);
+    width: 55px;
+}
+
+.date p{
+    font-size: 15px;
+}
+
+.date p:nth-child(1){
+    color: #fff;
+}
+.date p:nth-child(2){
+    color: var(--lemon);
+}
+
+.des small{
+    color: var(--grey);
+}
+
+.department{
+    background: #fff;
+    width: 776px;
+}
+
+.department table tr{
+    width: 100%;
 }

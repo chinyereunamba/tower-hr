@@ -6,7 +6,7 @@ function Layout({ children }) {
     return (
         <section className={`${style.layout}`}>
             <Header />
-            <main className="px-9 py-12">{children}</main>
+            <main className="px-9 py-11">{children}</main>
         </section>
     )
 }
