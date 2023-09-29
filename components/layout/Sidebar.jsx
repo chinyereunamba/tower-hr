@@ -8,14 +8,14 @@ function Sidebar() {
             <div className="grid place-content-center my-4">
                 <img className="w-40" src="logo.svg" alt="Logo" />
             </div>
-            <div className="flex-column">
+            <div className="flex-column mt-7">
                 <ul className="mt-3 mb-7">
-                    <small className="px-8 py-6 mb-3">Menu</small>
-                    <li className={`${style.active} px-8 py-3 flex gap-3 items-center`}>
+                    <small className="px-8 my-4">Menu</small>
+                    <li className={`px-8 py-3 flex gap-3 items-center`}>
                         <img src="layers-color.svg" />
                         <Link href="">Dashboard</Link>
                     </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
+                    <li className={`${style.active} px-8 py-3 flex gap-3 items-center`}>
                         <img src="profile-2user.svg" />
                         <Link href="">Employees</Link>
                     </li>

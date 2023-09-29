@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons button {
+    font-size: 14px;
+}
+.buttons button:first-child {
+    background: var(--white);
+}
+
+.buttons button:nth-child(2) {
+    background: var(--black);
+    color: var(--lemon);
+}
+
+.search {
+    background: #ffffff;
+}
+
+.search input {
+    background: transparent;
+    outline: none;
+    padding: 0;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    padding-block: 1rem;
+    padding-inline-end: auto;
+    text-align: left;
+    width: auto;
+}
+
+.table th {
+    color: var(--grey);
+    font-size: 17px;
+    font-weight: normal;
+}
+.table tbody tr {
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--grey);
+}
+
+.table td {
+    padding-block: 1rem;
+    font-size: 17px;
+    color: var(--black);
+}
+
+.table button {
+    background: var(--black);
+    color: var(--lemon);
+}
+
+.action span {
+    background: rgba(194, 255, 81, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.blue {
+    border-radius: 6px;
+    background: rgba(81, 119, 255, 0.3);
+    color: #1334e2;
+}
+
+.red {
+    border-radius: 6px;
+    background: #f3c0b5;
+    color: #e23813;
+}
+
+.green {
+    border-radius: 6px;
+    background: rgba(23, 226, 19, 0.2);
+    color: #17e213;
+}
+
+.lemon {
+    border-radius: 6px;
+    background: rgba(194, 255, 81, 0.3);
+    color: var(--black);
+}

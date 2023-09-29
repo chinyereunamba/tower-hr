@@ -5,7 +5,7 @@
 
 .sidebar {
     width: 250px;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--black);
     color: var(--grey);
     position: fixed;
@@ -28,4 +28,8 @@
     border-top: 1px solid var(--lemon);
     border-bottom: 1px solid var(--lemon);
     background-color: #c2ff511a;
+}
+
+.sidebar li.active svg{
+    color: var(--lemon);
 }
