@@ -1,12 +1,11 @@
 import React from "react"
-import style from "./Style.module.css"
-import EmployeeTable from "./EmployeeTable"
+import style from './Style.module.css'
 
-function Employees() {
+function Jobs() {
     return (
         <>
             <div className={`${style.header} mb-9 gap-5`}>
-                <h1 className="text-4xl font-bold">Employees</h1>
+                <h1 className="text-4xl font-bold">Jobs</h1>
                 <div className="flex justify-between items-center gap-5">
                     <div
                         className={`${style.search} flex gap-2 px-3 w-80 py-2 rounded-md text-sm items-center`}
@@ -22,17 +21,16 @@ function Employees() {
                             Filter
                         </button>
                         <button
-                            className={`flex items-center gap-2 px-3 py-2 rounded-md`}
+                            className={`flex items-center gap-2.5 px-3 py-2 rounded-md`}
                         >
                             <img src="add.svg" alt="" />
-                            Add new employee
+                            Create job opening
                         </button>
                     </div>
                 </div>
             </div>
-            <EmployeeTable />
         </>
     )
 }
 
-export default Employees
+export default Jobs

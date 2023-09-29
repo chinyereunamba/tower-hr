@@ -7,3 +7,10 @@
 .layout main{
     background: var(--grey-bg);
 }
+
+@media screen and (max-width: 1024px) {
+    .layout{
+        left: 0;
+        width: 100%;
+    }
+}

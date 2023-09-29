@@ -5,8 +5,8 @@
 
 .sidebar {
     width: 250px;
-    min-height: 100vh;
-    height: 100%;
+    /* min-height: 100vh;
+    height: 100%; */
     background: var(--black);
     color: var(--grey);
     position: fixed;
@@ -34,4 +34,10 @@
 
 .sidebar li.active svg{
     color: var(--lemon);
+}
+
+@media screen and (max-width: 1024px){
+    .sidebar{
+        left: -100%;
+    }
 }

@@ -4,7 +4,7 @@ import React from "react"
 
 function Sidebar() {
     return (
-        <nav className={`${style.sidebar} h-screen`}>
+        <nav className={`${style.sidebar} min-h-screen`}>
             <div className="grid place-content-center my-4">
                 <img className="w-40" src="logo.svg" alt="Logo" />
             </div>
@@ -36,7 +36,7 @@ function Sidebar() {
                     <small className="px-8 py-5 mb-3 text-base">Recruitment</small>
                     <li className="px-8 py-3 flex gap-3 items-center">
                         <img src="work.svg" />
-                        <Link href="">Jobs</Link>
+                        <Link href={"/jobs"}>Jobs</Link>
                     </li>
                     <li className="px-8 py-3 flex gap-3 items-center">
                         <img src="profile-add.svg" />

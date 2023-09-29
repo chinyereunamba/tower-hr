@@ -37,7 +37,7 @@
 }
 
 .schedule {
-    width: calc(100% - 710px - 24px);
+    min-width: calc(100% - 710px - 24px);
     background: #fff;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
@@ -68,7 +68,7 @@
 
 .department {
     background: #fff;
-    width: 769px;
+    width: 760px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -134,6 +134,29 @@
 
 .calendar {
     background: #fff;
-    width: 418px;
+    width: 410px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width:900px) {
+    .dashboard section{
+        flex-wrap: wrap;
+    }
+
+    .dashboard section div{
+        width: 100%;
+    }
+
+    .event{
+        width: 100%;
+    }
+
+    .compile_card{
+        gap: 1rem;
+
+    }
+
+    .card{
+        width: clamp(275px, 5vw, 400px);
+    }
 }

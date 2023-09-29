@@ -6,12 +6,21 @@ import style from "./Style.module.css"
 function Calendar() {
     const weekdayshort = moment.weekdaysShort()
     return (
-        <section className={`${style.calendar} rounded-md p-5`}>
+        <div className={`${style.calendar} rounded-md p-5`}>
             <div>
                 <Title content={"Calendar"} />
             </div>
             {weekdayshort}
-        </section>
+            <table>
+                <thead>
+                    <tr>
+                        {weekdayshort.forEach((el) => {
+                            ;<td>{el}</td>
+                        })}
+                    </tr>
+                </thead>
+            </table>
+        </div>
     )
 }
 

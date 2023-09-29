@@ -1,9 +1,10 @@
 import React from "react"
 import Card from "./Card"
+import style from './Style.module.css'
 
 function CompileCard() {
     return (
-        <section className={`flex justify-between`}>
+        <section className={`${style.compile_card} flex justify-between flex-wrap gap-5`}>
             <Card
                 title={"Total Employees"}
                 number={330}
