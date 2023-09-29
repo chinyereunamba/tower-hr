@@ -1,75 +1,84 @@
-.card{
+.card {
     width: 275px;
     background: #fff;
 }
 
-.card button{
+.card button {
     background: var(--black);
     color: var(--lemon);
 }
 
-.percent_des{
+.percent_des {
     color: var(--grey);
     font-size: 10px;
 }
 
-.percent{
-    background: rgba(194, 255, 81, 0.50);
+.percent {
+    background: rgba(194, 255, 81, 0.5);
     color: var(--black-2);
     font-size: 10px;
 }
 
-.activity{
+.activity {
     background: #fff;
     width: 710px;
 }
 
-.feed small{
+.feed small {
     color: var(--grey);
     font-size: 13px;
 }
 
-.feed button{
-    background:var(--black);
+.feed button {
+    background: var(--black);
     color: var(--lemon);
     font-size: 16px;
     line-height: 0.5rem;
 }
 
-.schedule{
+.schedule {
     width: calc(100% - 710px - 24px);
     background: #fff;
 }
 
-.event{
+.event {
     width: 100%;
 }
 
-.event .date{
+.event .date {
     background: var(--black);
     width: 55px;
 }
 
-.date p{
+.date p {
     font-size: 15px;
 }
 
-.date p:nth-child(1){
+.date p:nth-child(1) {
     color: #fff;
 }
-.date p:nth-child(2){
+.date p:nth-child(2) {
     color: var(--lemon);
 }
 
-.des small{
+.des small {
     color: var(--grey);
 }
 
-.department{
+.department {
     background: #fff;
-    width: 776px;
+    width: 769px;
 }
 
-.department table tr{
-    width: 100%;
+.department tr {
+    padding: auto;
+}
+
+.performance small {
+    font-size: 9px;
+}
+
+.calendar{
+    background: #fff;
+    width: 418px;
 }
