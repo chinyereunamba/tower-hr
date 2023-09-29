@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
 
 :root {
   --lemon: #C2FF51;

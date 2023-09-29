@@ -7,7 +7,7 @@ function Feed({img, description, time}) {
           <div className='flex gap-4 items-center'>
               <img src={img} alt="" />
               <div>
-                  <p className='font-medium text-base'>{ description }</p>
+                  <p className='font-medium text-lg'>{ description }</p>
                   <small>{ time }</small>
               </div>
           </div>

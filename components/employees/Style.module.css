@@ -36,7 +36,7 @@
     padding-block: 1rem;
     padding-inline-end: auto;
     text-align: left;
-    width: auto;
+    width: 100%;
 }
 
 .table th {
@@ -44,8 +44,11 @@
     font-size: 17px;
     font-weight: normal;
 }
-.table tbody tr {
-    height: auto;
+
+.table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--grey);
 }
@@ -54,6 +57,7 @@
     padding-block: 1rem;
     font-size: 17px;
     color: var(--black);
+    font-weight: 500;
 }
 
 .table button {

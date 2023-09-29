@@ -1,10 +1,11 @@
 import React from "react"
 import style from "./Style.module.css"
 import ScheduleChild from "./ScheduleChild"
+import Title from "./Title"
 function Schedule() {
     return (
         <div className={`${style.schedule} rounded-md p-5`}>
-            <h1 className="text-2xl font-semibold">Schedule</h1>
+            <Title content={'Schedule'} />
             <div>
                 <ScheduleChild
                     date={"10"}

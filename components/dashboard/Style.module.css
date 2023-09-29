@@ -10,7 +10,7 @@
 
 .percent_des {
     color: var(--grey);
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .percent {
@@ -39,6 +39,7 @@
 .schedule {
     width: calc(100% - 710px - 24px);
     background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
 .event {
@@ -68,17 +69,71 @@
 .department {
     background: #fff;
     width: 769px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
-.department tr {
-    padding: auto;
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    text-align: left;
+    width: 75%;
+}
+
+.table th:last-child,
+.table td:last-child{
+    width: 100%;
+}
+
+.table th {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.table tr {
+    display: flex;
+    align-items: center;
+}
+
+.table td {
+    padding-block: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.performance {
+    position: relative;
+    border: 1.5px solid var(--black-2);
+}
+
+.performance::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 1.14rem;
+    top: 0;
+    left: 0;
+    background: var(--lemon);
+    z-index: 1;
 }
 
 .performance small {
-    font-size: 9px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    font-weight: 500;
+    z-index: 200;
 }
 
-.calendar{
+.calendar {
     background: #fff;
     width: 418px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }

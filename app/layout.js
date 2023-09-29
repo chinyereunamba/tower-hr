@@ -1,10 +1,7 @@
 import Sidebar from "@/components/layout/Sidebar"
 import "./globals.css"
-import { Inter } from "next/font/google"
-
 import Layout from "@/components/layout/Layout"
-
-const inter = Inter({ subsets: ["latin"] })
+import Link from "next/link"
 
 export const metadata = {
     title: "Dashboard",
@@ -14,7 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <head>
+                <link
+                    href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1,800,500,700,400,300,900&display=swap"
+                    rel="stylesheet"
+                ></link>
+            </head>
+            <body>
                 <Sidebar />
                 <Layout>{children}</Layout>
             </body>

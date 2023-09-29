@@ -6,7 +6,7 @@ function Card({title, number, percent, percentDes}) {
         <div className={`${style.card} rounded-md flex flex-col gap-6`}>
             <div className="flex flex-col gap-4 p-3 ">
                 <div className="flex flex-col gap-2.5">
-                    <h1 className="text-xl">{title}</h1>
+                    <h1 className="text-xl font-medium">{title}</h1>
                     <h1 className="font-bold">{number}</h1>
                 </div>
                 <span className="flex gap-2">

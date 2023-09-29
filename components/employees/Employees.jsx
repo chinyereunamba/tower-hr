@@ -6,7 +6,7 @@ function Employees() {
     return (
         <>
             <div className={`${style.header} mb-9`}>
-                <h1 className="text-4xl font-semibold">Employees</h1>
+                <h1 className="text-4xl font-bold">Employees</h1>
                 <div className="flex justify-between items-center w-2/4">
                     <div
                         className={`${style.search} flex gap-2 px-3 w-72 py-2 rounded-md text-sm items-center`}

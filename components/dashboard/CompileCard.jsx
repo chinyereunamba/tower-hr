@@ -11,7 +11,7 @@ function CompileCard() {
                 percentDes={"increase last year"}
             />
             <Card
-                title={"Remote Employess"}
+                title={"Remote Employees"}
                 number={80}
                 percent={"+44%"}
                 percentDes={"increase in the last year"}
