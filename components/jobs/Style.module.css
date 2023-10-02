@@ -26,6 +26,34 @@
     padding: 0;
 }
 
+.card {
+    width: 370px;
+    background: #fff;
+}
+
+.card button {
+    background: var(--black-2);
+    color: var(--lemon);
+}
+
+.card h1{
+    font-size: 22px;
+}
+
+.about{
+    color: #bcbcbc;
+    font-size: 16px;
+}
+
+.status span:first-child{
+    color: var(--black);
+    line-height: 15px;
+}
+.status span:nth-child(2){
+    color: #bcbcbc;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 900px){
     .header{
         flex-direction: column;

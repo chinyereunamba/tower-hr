@@ -1,6 +1,7 @@
 import Link from "next/link"
 import style from "./Sidebar.module.css"
 import React from "react"
+import NavLink from "./Links"
 
 function Sidebar() {
     return (
@@ -11,48 +12,58 @@ function Sidebar() {
             <div className="flex-column mt-7">
                 <ul className="mt-3 mb-7">
                     <small className="px-8 my-4 text-base">Menu</small>
-                    <li className={`px-8 py-3 flex gap-3 items-center`}>
-                        <img src="layers-color.svg" />
-                        <Link href={"/"}>Dashboard</Link>
-                    </li>
-                    <li className={`${style.active} px-8 py-3 flex gap-3 items-center`}>
-                        <img src="profile-2user.svg" />
-                        <Link href={"employees"}>Employees</Link>
-                    </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="message-notif-2.svg" />
-                        <Link href="">Messages</Link>
-                    </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="calendar.svg" />
-                        <Link href="">Schedule</Link>
-                    </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="wallet.svg" />
-                        <Link href="">Payroll</Link>
-                    </li>
+                    <NavLink
+                        to={"/"}
+                        linkName={"Dashboard"}
+                        svg={"layers.svg"}
+                    />
+
+                    <NavLink
+                        to={"/employees"}
+                        linkName={"Employees"}
+                        svg={"profile-2user.svg"}
+                    />
+
+                    <NavLink
+                        to={"/messages"}
+                        linkName={"Messages"}
+                        svg={"message-notif-2.svg"}
+                    />
+
+                    <NavLink
+                        to={"/schedule"}
+                        linkName={"Schedule"}
+                        svg={"calendar.svg"}
+                    />
+
+                    <NavLink
+                        to={"/payroll"}
+                        linkName={"Payroll"}
+                        svg={"wallet.svg"}
+                    />
                 </ul>
                 <ul className="mt-3 mb-6">
-                    <small className="px-8 py-5 mb-3 text-base">Recruitment</small>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="work.svg" />
-                        <Link href={"/jobs"}>Jobs</Link>
-                    </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="profile-add.svg" />
-                        <Link href="">Interviews</Link>
-                    </li>
+                    <small className={`px-8 py-5 mb-3 text-base`}>
+                        Recruitment
+                    </small>
+
+                    <NavLink to={"/jobs"} linkName={"Jobs"} svg={"work.svg"} />
+
+                    <NavLink
+                        to={""}
+                        linkName={"Interviews"}
+                        svg={"profile-add.svg"}
+                    />
                 </ul>
                 <ul className="mt-3 mb-6">
                     <small className="px-8 py-5 mb-3 text-base">Other</small>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="setting.svg" />
-                        <Link href="">Settings</Link>
-                    </li>
-                    <li className="px-8 py-3 flex gap-3 items-center">
-                        <img src="activity.svg" />
-                        <Link href="">Report</Link>
-                    </li>
+                    <NavLink
+                        to={""}
+                        linkName={"Settings"}
+                        svg={"setting.svg"}
+                    />
+
+                    <NavLink to={""} linkName={"Report"} svg={"activity.svg"} />
                 </ul>
             </div>
         </nav>

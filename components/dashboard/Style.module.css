@@ -4,7 +4,7 @@
 }
 
 .card button {
-    background: var(--black);
+    background: var(--black-2);
     color: var(--lemon);
 }
 
@@ -108,25 +108,10 @@
 .performance {
     position: relative;
     border: 1.5px solid var(--black-2);
-}
-
-.performance::before {
-    content: "";
-    position: absolute;
-    width: 85%;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    height: 1.14rem;
-    top: 0;
-    left: 0;
-    background: var(--lemon);
-    z-index: 1;
+    height: 1.4rem;
 }
 
 .performance small {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 10px;
     font-weight: 500;
     z-index: 200;

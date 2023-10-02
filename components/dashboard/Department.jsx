@@ -60,7 +60,7 @@ function Department() {
                         <tr>
                             <td>4. Accounting</td>
                             <td>
-                                <Performance percentage={55} />
+                                <Performance percentage={100} />
                             </td>
                             <td className="flex flex-col">
                                 Life changing organizational project{" "}
