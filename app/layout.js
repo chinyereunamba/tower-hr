@@ -1,7 +1,6 @@
 import Sidebar from "@/components/layout/Sidebar"
 import "./globals.css"
 import Layout from "@/components/layout/Layout"
-import Link from "next/link"
 
 export const metadata = {
     title: "Dashboard",

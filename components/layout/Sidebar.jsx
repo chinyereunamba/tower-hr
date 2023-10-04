@@ -1,4 +1,3 @@
-import Link from "next/link"
 import style from "./Sidebar.module.css"
 import React from "react"
 import NavLink from "./Links"
