@@ -11,8 +11,8 @@ function Department() {
                 List of top performing departments of 24 departments in this
                 organization
             </small>
-            <div className="my-5">
-                <table className={`${style.table} table`}>
+            <div className="mt-5">
+                <table className={`${style.table}`}>
                     <thead>
                         <tr>
                             <th className="">Rank</th>
@@ -22,52 +22,36 @@ function Department() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1. UX/UI </td>
-                            <td>
-                                <Performance percentage={85} />
-                            </td>
-                            <td className="flex flex-col">
-                                Life changing organizational project{" "}
-                                <small className="text-sm text-gray-400">
-                                    Duration: 10 weeks
-                                </small>
-                            </td>
+                            <Performance
+                                rank={"1. UI/UX"}
+                                percentage={85}
+                                project={"Life changing organizational project"}
+                                duration={"10 weeks"}
+                            />
                         </tr>
                         <tr>
-                            <td>2. IT </td>
-                            <td>
-                                <Performance percentage={75} />
-                            </td>
-                            <td className="flex flex-col">
-                                Life changing organizational project{" "}
-                                <small className="text-sm text-gray-400">
-                                    Duration: 10 weeks
-                                </small>
-                            </td>
+                            <Performance
+                                rank={"2. IT"}
+                                percentage={50}
+                                project={"Life changing organizational project"}
+                                duration={"10 weeks"}
+                            />
                         </tr>
                         <tr>
-                            <td>3. Development</td>
-                            <td>
-                                <Performance percentage={60} />
-                            </td>
-                            <td className="flex flex-col">
-                                Life changing organizational project{" "}
-                                <small className="text-sm text-gray-400">
-                                    Duration: 10 weeks
-                                </small>
-                            </td>
+                            <Performance
+                                rank={"3. Development"}
+                                percentage={95}
+                                project={"Life changing organizational project"}
+                                duration={"10 weeks"}
+                            />
                         </tr>
                         <tr>
-                            <td>4. Accounting</td>
-                            <td>
-                                <Performance percentage={100} />
-                            </td>
-                            <td className="flex flex-col">
-                                Life changing organizational project{" "}
-                                <small className="text-sm text-gray-400">
-                                    Duration: 10 weeks
-                                </small>
-                            </td>
+                            <Performance
+                                rank={"4. Accounting"}
+                                percentage={79}
+                                project={"Life changing organizational project"}
+                                duration={"10 weeks"}
+                            />
                         </tr>
                     </tbody>
                 </table>
