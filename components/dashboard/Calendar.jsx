@@ -1,23 +1,27 @@
-import React from "react"
+"use client"
+
+import React, { useState } from "react"
 import moment from "moment"
 import Title from "./Title"
 import style from "./Style.module.css"
-import MonthPicker from "./MonthPicker"
 
 function Calendar() {
+    const state = {
+        allMonths: moment.monthsShort(),
+        displayMonth: moment.months(),
+    }
+    const [dateObject, setDatObject] = useState(moment())
+    const [month, setMonth] = useState("")
+    const [monthIndex, setMonthIndex] = useState(dateObject.get("month"))
+    const [showMonths, setShowMonths] = useState(false)
+
     const weekdayshort = moment.weekdaysShort()
 
     const days = weekdayshort.map((day) => {
         return <div key={day}>{day}</div>
     })
 
-    const state = {
-        dateObject: moment(),
-        allMonths: moment.monthsShort(),
-    }
-
     const firstDayOfMonth = () => {
-        let dateObject = state.dateObject
         let firstDay = moment(dateObject).startOf("month").format("d")
         return firstDay
     }
@@ -25,15 +29,13 @@ function Calendar() {
     let blanks = []
     for (let i = 0; i < firstDayOfMonth(); i++) {
         blanks.push(
-            <div key={i} className={style.empty}>
-                {""}
-            </div>
+            <div key={i} className={style.empty}></div>
         )
     }
 
     let daysInMonth = []
-    for (let d = 1; d <= state.dateObject.daysInMonth(); d++) {
-        const day = d == state.dateObject.format("D") ? style.today : ""
+    for (let d = 1; d <= dateObject.daysInMonth(); d++) {
+        const day = d == dateObject.format("D") ? style.today : ""
         daysInMonth.push(
             <div key={d} className={`${day}`}>
                 {d}
@@ -69,28 +71,54 @@ function Calendar() {
         )
     })
 
-    const month = () => {
-        const year = state.dateObject.year()
-        const currentMonth = state.dateObject.format("MMMM")
-        return <MonthPicker content={`${currentMonth} ${year}`} />
+    function monthFnc() {
+        const year = dateObject.year()
+        const currentMonth =
+            month == "" ? setMonth(dateObject.format("MMMM")) : month
+
+        return (
+            <div
+                className="flex flex-col items-start justify-start"
+                onClick={(e) => {
+                    setShowMonths(!showMonths)
+                }}
+            >
+                <span
+                    className={`${style.picker} rounded-md font-bold py-1.5 px-3`}
+                >
+                    {currentMonth} {year}
+                </span>
+            </div>
+        )
+    }
+
+    function setMonthFnc(month) {
+        setDatObject(moment(dateObject).set("month", month))
+        setMonth(state.displayMonth[month])
+        setMonthIndex(month)
+        setShowMonths(!showMonths)
     }
 
     const monthList = (props) => {
         let months = []
         props.map((data, index) => {
-            const currentMonth = index === state.dateObject.get('month') ? style.currentMonth : ""
-             months.push(
-                 <div key={index} className={`${currentMonth} ${style.month}`}>
-                     {data}
-                 </div>
-             )
+            const currentMonth = index === monthIndex ? style.currentMonth : ""
+            months.push(
+                <div
+                    key={index}
+                    onClick={(e) => setMonthFnc(index)}
+                    className={`${currentMonth} ${style.month}`}
+                >
+                    {data}
+                </div>
+            )
         })
+
         let rows = []
         let cells = []
 
         months.forEach((row, i) => {
             if (i % 3 !== 0 || i == 0) {
-                // except zero index
                 cells.push(row)
             } else {
                 rows.push(cells)
@@ -99,29 +127,29 @@ function Calendar() {
             }
         })
         rows.push(cells)
-        
-        const monthT = rows.map((row, i) => {
+
+        const monthList = rows.map((row, i) => {
             return <div key={i}>{row}</div>
         })
-        return monthT
-        
+        return monthList
     }
 
     return (
         <div className={`${style.calendar} rounded-md p-5`}>
             <div className={`flex justify-between items-start`}>
                 <Title content={"Calendar"} />
-                {month()}
+                {monthFnc()}
             </div>
-
-            <div className={`${style.months}`}>
-                {monthList(state.allMonths)}
-            </div>
-
-            <div className={`${style.grid} mt-4`}>
-                <div className={style.day}>{days}</div>
-                {daysinmonth}
-            </div>
+            {showMonths ? (
+                <div className={`${style.months} mt-4`}>
+                    {monthList(state.allMonths)}
+                </div>
+            ) : (
+                <div className={`${style.grid} mt-4`}>
+                    <div className={style.day}>{days}</div>
+                    {daysinmonth}
+                </div>
+            )}
         </div>
     )
 }

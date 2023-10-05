@@ -120,6 +120,7 @@
 .calendar {
     background: #fff;
     width: 410px;
+    height: 450px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -181,14 +182,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     cursor: pointer;
 }
 
-.months .month:hover, .currentMonth{
-    background: var(--black);
-    color: var(--lemon)
-
+.months .currentMonth, .months .month:hover{
+    font-weight: 700;
+    background: rgba(194, 255, 81, 0.5);
+    color: var(--black);
+    border-radius: 6px;
 }
 
 .picker {
