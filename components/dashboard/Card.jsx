@@ -9,12 +9,12 @@ function Card({title, number, percent, percentDes}) {
                     <h1 className="text-xl font-medium">{title}</h1>
                     <h1 className="font-bold">{number}</h1>
                 </div>
-                <span className="flex gap-2">
+                <span className="flex gap-1.5 items-center">
                     {percent == null ? (
                         ""
                     ) : (
                         <small
-                            className={`${style.percent} py-0.5 px-1 rounded-sm`}
+                            className={`${style.percent} font-semibold py-0.5 px-1 rounded-sm items-center`}
                         >
                             {percent}
                         </small>
